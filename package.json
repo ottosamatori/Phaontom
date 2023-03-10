@@ -1,0 +1,29 @@
+{
+  "name": "phaontom",
+  "version": "1.0.0",
+  "description": "ReactJS Design System",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npm run test",
+    "publish": "npm publish",
+    "login": "npm login",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [
+    "design system",
+    "tailwindcss",
+    "ui-kit",
+    "reactjs",
+    "ottosamatori"
+  ],
+  "author": "Ottosamatori",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "typescript": "^4.9.5"
+  }
+}
