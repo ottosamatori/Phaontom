@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, forwardRef } from 'react';
 import { ColorType, RoundedType, SizeType, VariantType } from '@/types/type';
 import clsx from 'clsx';
-import styles from './styles';
+import classes from './classes';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: React.MouseEventHandler;
@@ -30,9 +30,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
-    const classes = styles.color[color].variant[variant];
-    const borderRadius = styles.rounded[rounded];
-    const height = styles.size[size];
+    const appearence = classes.color[color].variant[variant];
+    const borderRadius = classes.rounded[rounded];
+    const height = classes.size[size];
 
     return (
       <button
@@ -41,10 +41,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onClick={onClick}
         className={clsx(
           { 'w-full': fullWidth },
+          appearence.initial,
+          appearence.focused,
+          classes.root,
           borderRadius,
-          classes.focused,
-          classes.initial,
-          styles.root,
           className,
           height,
         )}

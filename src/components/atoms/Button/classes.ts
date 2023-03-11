@@ -1,4 +1,4 @@
-const styles = {
+const classes = {
   root: 'text-center text-white',
   size: {
     lg: 'h-12 px-4',
@@ -131,4 +131,4 @@ const styles = {
   }
 }
 
-export default styles
+export default classes

@@ -4,7 +4,6 @@ export enum TypographySizeEnum {
   '4xl' = 'text-4xl',
   '3xl' = 'text-3xl',
   '2xl' = 'text-2xl',
-  '1xl' = 'text-1xl',
   xl = 'text-xl',
   lg = 'text-lg',
   md = 'text-md',
