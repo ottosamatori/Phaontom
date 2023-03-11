@@ -21,8 +21,8 @@ export const Size: ComponentStory<typeof Typography> = () => (
 
 export const Thickness: ComponentStory<typeof Typography> = () => (
   <section className="flex flex-col gap-4">
-    {fontWeight.map((size) => (
-      <Typography thickness={size}>Lorem ipsum dolor sit amet</Typography>
+    {fontWeight.map((weight) => (
+      <Typography thickness={weight}>Lorem ipsum dolor sit amet</Typography>
     ))}
   </section>
 );
