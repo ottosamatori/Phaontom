@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import clsx from 'clsx';
 import { ThicknessFontEnum, TypographySizeEnum } from '../../../types/enum';
 import { TagType, TypographySizeType } from '../../../types/type';
@@ -12,14 +12,14 @@ type TypographyProps = {
   tag?: TagType;
 };
 
-const Typography = ({
+const Typography: FC<TypographyProps> = ({
   thickness = 'regular',
   size = 'md',
   tag = 'p',
   className,
   children,
   style,
-}: TypographyProps) => {
+}) => {
   const Tag = tag as keyof JSX.IntrinsicElements;
   const fontWeight = ThicknessFontEnum[thickness];
   const fontSize = TypographySizeEnum[size];

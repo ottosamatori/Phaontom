@@ -45,7 +45,7 @@ export const Variant: ComponentStory<typeof Button> = () => (
     {variants.map((variant) => (
       <section className="flex flex-col gap-4">
         {colors.map((color) => (
-          <section className="flex gap-4">
+          <section className="flex items-center gap-4">
             {sizes.map((size) => (
               <Button
                 key={`${color}_${size}_${variant}`}

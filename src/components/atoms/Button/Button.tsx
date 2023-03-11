@@ -42,7 +42,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={clsx(
           { 'w-full': fullWidth },
           appearence.initial,
-          appearence.focused,
+          appearence.hovered,
           classes.root,
           borderRadius,
           className,
