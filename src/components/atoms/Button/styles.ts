@@ -17,17 +17,17 @@ const styles = {
     base: {
       variant: {
         filled: {
-          normal: 'bg-primary ',
+          initial: 'bg-primary ',
           focused: 'hover:bg-secondary',
           loading: 'bg-secondary text-tertiary'
         },
         stroked: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         },
         faded: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         }
@@ -36,17 +36,17 @@ const styles = {
     neutral: {
       variant: {
         filled: {
-          normal: 'bg-darkslategray-800 text-white',
+          initial: 'bg-darkslategray-800 text-white',
           focused: 'hover:bg-darkslategray-700 text-white',
           loading: 'bg-darkslategray-800 text-tertiary'
         },
         stroked: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         },
         faded: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         }
@@ -55,17 +55,17 @@ const styles = {
     error: {
       variant: {
         filled: {
-          normal: 'bg-red-500 text-white',
+          initial: 'bg-red-500 text-white',
           focused: 'hover:bg-red-400 text-white',
           loading: 'bg-red-400 text-tertiary'
         },
         stroked: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         },
         faded: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         }
@@ -74,17 +74,17 @@ const styles = {
     warning: {
       variant: {
         filled: {
-          normal: 'bg-amber-500 text-white',
+          initial: 'bg-amber-500 text-white',
           focused: 'hover:bg-amber-400 text-white',
           loading: 'bg-amber-400 text-tertiary'
         },
         stroked: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         },
         faded: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         }
@@ -93,17 +93,17 @@ const styles = {
     info:{
       variant: {
         filled: {
-          normal: 'bg-blue-500 text-white',
+          initial: 'bg-blue-500 text-white',
           focused: 'hover:bg-blue-400 text-white',
           loading: 'bg-blue-400 text-tertiary'
         },
         stroked: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         },
         faded: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         }
@@ -112,17 +112,17 @@ const styles = {
     success: {
       variant: {
         filled: {
-          normal: 'bg-green-500 text-white',
+          initial: 'bg-green-500 text-white',
           focused: 'hover:bg-green-400 text-white',
           loading: 'bg-green-400 text-tertiary'
         },
         stroked: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         },
         faded: {
-          normal: 'bg-primary text-white',
+          initial: 'bg-primary text-white',
           focused: 'hover:bg-secondary text-white',
           loading: 'bg-secondary text-tertiary'
         }

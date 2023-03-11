@@ -30,7 +30,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
-    const base = styles.color[color].variant[variant];
+    const classes = styles.color[color].variant[variant];
     const borderRadius = styles.rounded[rounded];
     const height = styles.size[size];
 
@@ -42,8 +42,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={clsx(
           { 'w-full': fullWidth },
           borderRadius,
-          base.focused,
-          base.normal,
+          classes.focused,
+          classes.initial,
           styles.root,
           className,
           height,
