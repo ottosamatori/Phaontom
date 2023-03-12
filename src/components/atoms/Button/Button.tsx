@@ -58,12 +58,23 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...props}
       >
-        {children}
-        {loading && (
-          <div className="absolute right-2 top-1">
-            <Loader size={size} />
-          </div>
-        )}
+        <div className="relative flex items-center justify-center">
+          {children}
+          {loading && (
+            <div
+              className={clsx(
+                'absolute -right-6',
+                rounded !== 'full' && {
+                  '-top-1.5': size === 'lg',
+                  '-top-0.5': size === 'md',
+                  'top-0': size === 'sm',
+                },
+              )}
+            >
+              <Loader size={size} />
+            </div>
+          )}
+        </div>
       </button>
     );
   },

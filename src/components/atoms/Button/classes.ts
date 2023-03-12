@@ -1,5 +1,5 @@
 const classes = {
-  root: 'relative flex items-center text-center px-8',
+  root: 'relative px-8',
   size: {
     lg: 'h-12',
     md: 'h-10',
