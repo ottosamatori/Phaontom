@@ -19,3 +19,9 @@ export enum ThicknessFontEnum {
   medium = 'font-medium',
   bold = 'font-bold',
 }
+
+export enum LoaderSizeEnum {
+  sm = 'w-2.5 h-2.5',
+  md = 'w-3.5 h-3.5',
+  lg = 'w-4 h-4',
+}

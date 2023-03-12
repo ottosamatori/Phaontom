@@ -1,13 +1,18 @@
+import { LoaderSizeEnum } from '../../../types/enum';
 import React, { FC } from 'react';
+import clsx from 'clsx';
 
 type LoaderProps = {
-  size?: number;
+  size?: keyof typeof LoaderSizeEnum;
+  style?: React.CSSProperties;
+  className?: string;
 };
 
-const Loader: FC<LoaderProps> = ({ size = 20 }) => {
+const Loader: FC<LoaderProps> = ({ size = 'md', style, className }) => {
   return (
     <svg
-      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+      className={clsx('animate-spin', LoaderSizeEnum[size], className)}
+      style={style}
       fill="none"
       viewBox="0 0 24 24"
     >
@@ -17,7 +22,7 @@ const Loader: FC<LoaderProps> = ({ size = 20 }) => {
         cy="12"
         r="10"
         stroke="currentColor"
-        strokeWidth="4"
+        strokeWidth={4}
       />
       <path
         className="opacity-75"

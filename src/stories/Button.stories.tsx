@@ -2,6 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from '../components/atoms/Button/Button';
 import { action } from '@storybook/addon-actions';
 import { ColorType, SizeType, VariantType } from '../types/type';
+import { Fragment } from 'react';
 
 const colors: ColorType[] = [
   'base',
@@ -56,6 +57,49 @@ export const Variant: ComponentStory<typeof Button> = () => (
               >
                 Button
               </Button>
+            ))}
+          </section>
+        ))}
+      </section>
+    ))}
+  </section>
+);
+
+export const Status: ComponentStory<typeof Button> = () => (
+  <section className="flex flex-col gap-8">
+    {variants.map((variant) => (
+      <section className="flex flex-col gap-4">
+        {colors.map((color) => (
+          <section className="flex items-center gap-4">
+            {sizes.map((size) => (
+              <Fragment key={`${color}_${size}_${variant}`}>
+                <Button
+                  onClick={action('Clicked !')}
+                  variant={variant}
+                  color={color}
+                  size={size}
+                >
+                  Button
+                </Button>
+                <Button
+                  disabled
+                  onClick={action('Clicked !')}
+                  variant={variant}
+                  color={color}
+                  size={size}
+                >
+                  Button
+                </Button>
+                <Button
+                  loading
+                  onClick={action('Clicked !')}
+                  variant={variant}
+                  color={color}
+                  size={size}
+                >
+                  Button
+                </Button>
+              </Fragment>
             ))}
           </section>
         ))}
