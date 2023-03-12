@@ -1,9 +1,9 @@
 const classes = {
   root: 'relative flex items-center text-center px-8',
   size: {
-    lg: 'h-12 px-4',
-    md: 'h-10 px-3',
-    sm: 'h-8 px-2'
+    lg: 'h-12',
+    md: 'h-10',
+    sm: 'h-8'
   },
   rounded: {
     none: 'rounded-none',
