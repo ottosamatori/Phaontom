@@ -4,7 +4,6 @@ export enum TypographySizeEnum {
   '4xl' = 'text-4xl',
   '3xl' = 'text-3xl',
   '2xl' = 'text-2xl',
-  '1xl' = 'text-1xl',
   xl = 'text-xl',
   lg = 'text-lg',
   md = 'text-md',
@@ -19,4 +18,10 @@ export enum ThicknessFontEnum {
   regular = 'font-normal',
   medium = 'font-medium',
   bold = 'font-bold',
+}
+
+export enum LoaderSizeEnum {
+  sm = 'w-2.5 h-2.5',
+  md = 'w-3.5 h-3.5',
+  lg = 'w-4 h-4',
 }
