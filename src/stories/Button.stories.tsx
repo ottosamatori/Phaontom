@@ -17,7 +17,7 @@ const variants: VariantType[] = ['filled', 'stroked', 'faded'];
 const borderRadius: RoundedType[] = ['none', 'sm', 'md', 'lg', 'xl', 'full'];
 
 export default {
-  title: 'Button',
+  title: 'Design system/Atoms/Button',
   component: Button,
   argTypes: { onClick: { action: 'clicked' } },
 } as ComponentMeta<typeof Button>;

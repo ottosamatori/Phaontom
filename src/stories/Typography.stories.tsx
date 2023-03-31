@@ -7,7 +7,7 @@ const sizes = Object.keys(TypographySizeEnum) as TypographySizeType[];
 const fontWeight = Object.keys(ThicknessFontEnum) as ThicknessFontType[];
 
 export default {
-  title: 'Typography',
+  title: 'Design system/Atoms/Typography',
   component: Typography,
 } as ComponentMeta<typeof Typography>;
 
