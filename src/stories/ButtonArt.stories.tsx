@@ -1,8 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Button from '../components/atoms/Button/Button';
 import { action } from '@storybook/addon-actions';
-import { ColorType, RoundedType, SizeType, VariantType } from '../types/type';
+import { ColorType, RoundedType } from '../types/type';
 import ButtonArt from '../components/atoms/ButtonArt/ButtonArt';
+import RocketIcon from '../components/commons/RocketIcon';
+import { Fragment } from 'react';
 
 const colors: ColorType[] = [
   'base',
@@ -12,27 +13,26 @@ const colors: ColorType[] = [
   'info',
   'success',
 ];
-const sizes: SizeType[] = ['lg', 'md', 'sm'];
-const variants: VariantType[] = ['filled', 'stroked', 'faded'];
-const borderRadius: RoundedType[] = ['none', 'sm', 'md', 'lg', 'xl', 'full'];
+
+const borderRadius: Extract<RoundedType, 'lg' | 'full'>[] = ['lg', 'full'];
 
 export default {
   title: 'Design system/Atoms/ButtonArt',
-  component: Button,
+  component: ButtonArt,
   argTypes: { onClick: { action: 'clicked' } },
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof ButtonArt>;
 
-export const Color: ComponentStory<typeof Button> = () => (
+export const Color: ComponentStory<typeof ButtonArt> = () => (
   <section className="flex flex-col gap-4">
     {colors.map((color) => (
       <section className="flex gap-4">
-        {sizes.map((size) => (
+        {borderRadius.map((rounded) => (
           <ButtonArt
-            key={`${color}_${size}`}
+            icon={<RocketIcon size={20} />}
             onClick={action('Clicked !')}
-            size={size}
+            key={`${color}_${rounded}`}
+            rounded={rounded}
             color={color}
-            variant="filled"
           >
             Button
           </ButtonArt>
@@ -42,26 +42,65 @@ export const Color: ComponentStory<typeof Button> = () => (
   </section>
 );
 
-// export const Variant: ComponentStory<typeof Button> = () => (
-//   <section className="flex gap-8">
-//     {variants.map((variant) => (
-//       <section className="flex flex-col gap-4">
-//         {colors.map((color) => (
-//           <section className="flex items-center gap-4">
-//             {sizes.map((size) => (
-//               <Button
-//                 key={`${color}_${size}_${variant}`}
-//                 onClick={action('Clicked !')}
-//                 variant={variant}
-//                 color={color}
-//                 size={size}
-//               >
-//                 Button
-//               </Button>
-//             ))}
-//           </section>
-//         ))}
-//       </section>
-//     ))}
-//   </section>
-// );
+export const FullWidth: ComponentStory<typeof ButtonArt> = () => (
+  <section className="flex flex-col gap-4">
+    {colors.map((color) => (
+      <section className="flex gap-4">
+        {borderRadius.map((rounded) => (
+          <ButtonArt
+            fullWidth
+            color={color}
+            rounded={rounded}
+            onClick={action('Clicked !')}
+            key={`${color}_${rounded}`}
+            icon={<RocketIcon size={20} />}
+          >
+            Button full width
+          </ButtonArt>
+        ))}
+      </section>
+    ))}
+  </section>
+);
+
+export const Status: ComponentStory<typeof ButtonArt> = () => (
+  <section className="flex flex-col gap-4">
+    {colors.map((color) => (
+      <section className="flex gap-4">
+        {borderRadius.map((rounded) => (
+          <Fragment>
+            <ButtonArt
+              color={color}
+              rounded={rounded}
+              onClick={action('Clicked !')}
+              key={`${color}_${rounded}`}
+              icon={<RocketIcon size={20} />}
+            >
+              Button
+            </ButtonArt>
+            <ButtonArt
+              disabled
+              color={color}
+              rounded={rounded}
+              onClick={action('Clicked !')}
+              key={`${color}_${rounded}`}
+              icon={<RocketIcon size={20} />}
+            >
+              Button
+            </ButtonArt>
+            <ButtonArt
+              loading
+              color={color}
+              rounded={rounded}
+              onClick={action('Clicked !')}
+              key={`${color}_${rounded}`}
+              icon={<RocketIcon size={20} />}
+            >
+              Button
+            </ButtonArt>
+          </Fragment>
+        ))}
+      </section>
+    ))}
+  </section>
+);
