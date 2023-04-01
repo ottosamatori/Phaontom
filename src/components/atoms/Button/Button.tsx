@@ -41,15 +41,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button
-        disabled={disabled || loading}
         ref={ref}
         type={type}
         onClick={onClick}
+        disabled={disabled || loading}
         className={clsx(
-          appearence.initial,
-          fullWidth && 'w-full',
           disabled && appearence.disabled,
           loading && appearence.loading,
+          fullWidth && 'w-full',
+          appearence.initial,
           appearence.hovered,
           classes.root,
           borderRadius,
