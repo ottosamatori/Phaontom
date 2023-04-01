@@ -5,9 +5,9 @@ import classes from './classes';
 import Loader from '../Loader/Loader';
 
 type ButtonArtProps = {
+  rounded?: Extract<RoundedType, 'lg' | 'full'>;
   onClick: React.MouseEventHandler;
   children: React.ReactNode;
-  rounded?: Extract<RoundedType, 'lg' | 'full'>;
   fullWidth?: boolean;
   disabled?: boolean;
   loading?: boolean;
@@ -27,9 +27,9 @@ const ButtonArt: FC<ButtonArtProps> = ({
   icon,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const shape = classes.color[color].shape;
-  const button = classes.color[color].button;
   const borderRadius = classes.rounded[rounded];
+  const button = classes.color[color].button;
+  const shape = classes.color[color].shape;
 
   return (
     <button
@@ -46,7 +46,6 @@ const ButtonArt: FC<ButtonArtProps> = ({
           [classes.cursor.initial]: isHovered,
           [classes.cursor.disabled]: disabled,
           [classes.cursor.loading]: loading,
-
           [button?.initial]: !isHovered,
           [button?.hovered]: isHovered,
         },
