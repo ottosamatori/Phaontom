@@ -1,9 +1,9 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+// const defaultTheme = require('tailwindcss/defaultTheme');
 const defaultColors = require('tailwindcss/colors');
 const theme = require('./src/themes/basic');
 
 module.exports = {
-  important: true,
+  // important: true,
   content: [
     './app/**/*.{html,js,ts,jsx,tsx}',
     './pages/**/*.{html,js,ts,jsx,tsx}',

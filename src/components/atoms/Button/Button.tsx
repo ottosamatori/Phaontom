@@ -35,7 +35,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
-    const appearence = classes.color[color].variant[variant];
+    const appearence = classes.colors[color].variant[variant];
     const borderRadius = classes.rounded[rounded];
     const height = classes.size[size];
 

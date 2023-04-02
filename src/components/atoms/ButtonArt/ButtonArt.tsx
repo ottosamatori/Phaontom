@@ -28,8 +28,8 @@ const ButtonArt: FC<ButtonArtProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const borderRadius = classes.rounded[rounded];
-  const button = classes.color[color].button;
-  const shape = classes.color[color].shape;
+  const button = classes.colors[color].button;
+  const shape = classes.colors[color].shape;
 
   return (
     <button
@@ -60,6 +60,7 @@ const ButtonArt: FC<ButtonArtProps> = ({
               [shape.initial?.iconContainer]: !isHovered,
               [shape.hovered?.iconContainer]: isHovered,
               [classes.cursor.initial]: isHovered,
+              [shape.loading]: loading || disabled,
             },
           )}
         >
