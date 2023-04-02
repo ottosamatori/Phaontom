@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+// const defaultTheme = require('tailwindcss/defaultTheme');
 const defaultColors = require('tailwindcss/colors');
 const theme = require('./src/themes/basic');
 
