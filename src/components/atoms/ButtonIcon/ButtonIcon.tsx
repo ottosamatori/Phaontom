@@ -1,6 +1,6 @@
 import { ColorType, RoundedType, SizeType } from '@/types/type';
 import clsx from 'clsx';
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import Button from '../Button/Button';
 import Loader from '../Loader/Loader';
 import classes from './classes';

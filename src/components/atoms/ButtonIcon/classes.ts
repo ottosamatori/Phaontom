@@ -1,6 +1,6 @@
 const classes = {
   root: {
-    button: 'px-0',
+    button: '!px-0',
   },
   size: {
     lg: 'w-12',
