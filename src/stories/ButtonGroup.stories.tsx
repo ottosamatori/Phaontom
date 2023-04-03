@@ -22,7 +22,7 @@ export default {
   argTypes: { onClick: { action: 'clicked' } },
 } as ComponentMeta<typeof ButtonGroup>;
 
-export const Color: ComponentStory<typeof ButtonGroup> = () => (
+export const Colors: ComponentStory<typeof ButtonGroup> = () => (
   <section className="flex flex-col gap-4">
     {colors.map((color) => (
       <section className="flex gap-4">
@@ -63,65 +63,73 @@ export const Color: ComponentStory<typeof ButtonGroup> = () => (
   </section>
 );
 
-// export const FullWidth: ComponentStory<typeof ButtonGroup> = () => (
-//   <section className="flex flex-col gap-4">
-//     {colors.map((color) => (
-//       <section className="flex gap-4">
-//         {borderRadius.map((rounded) => (
-//           <ButtonGroup
-//             fullWidth
-//             color={color}
-//             rounded={rounded}
-//             onClick={action('Clicked !')}
-//             key={`${color}_${rounded}`}
-//             icon={<RocketIcon size={20} />}
-//           >
-//             Button full width
-//           </ButtonGroup>
-//         ))}
-//       </section>
-//     ))}
-//   </section>
-// );
+export const Rounded: ComponentStory<typeof ButtonGroup> = () => (
+  <section className="flex flex-col gap-4">
+    <section className="flex gap-4">
+      {borderRadius.map((rounded) => (
+        <ButtonGroup>
+          <Button
+            color="neutral"
+            rounded={rounded}
+            onClick={action('Clicked !')}
+          >
+            Button
+          </Button>
+          <Button
+            color="neutral"
+            rounded={rounded}
+            onClick={action('Clicked !')}
+          >
+            Button
+          </Button>
+          <Button
+            color="neutral"
+            rounded={rounded}
+            onClick={action('Clicked !')}
+          >
+            Button
+          </Button>
+        </ButtonGroup>
+      ))}
+    </section>
+  </section>
+);
 
-// export const Status: ComponentStory<typeof ButtonGroup> = () => (
-//   <section className="flex flex-col gap-4">
-//     {colors.map((color) => (
-//       <section className="flex gap-4">
-//         {borderRadius.map((rounded) => (
-//           <Fragment>
-//             <ButtonGroup
-//               color={color}
-//               rounded={rounded}
-//               onClick={action('Clicked !')}
-//               key={`${color}_${rounded}`}
-//               icon={<RocketIcon size={20} />}
-//             >
-//               Button
-//             </ButtonGroup>
-//             <ButtonGroup
-//               disabled
-//               color={color}
-//               rounded={rounded}
-//               onClick={action('Clicked !')}
-//               key={`${color}_${rounded}`}
-//               icon={<RocketIcon size={20} />}
-//             >
-//               Button
-//             </ButtonGroup>
-//             <ButtonGroup
-//               loading
-//               color={color}
-//               rounded={rounded}
-//               onClick={action('Clicked !')}
-//               key={`${color}_${rounded}`}
-//               icon={<RocketIcon size={20} />}
-//             >
-//               Button
-//             </ButtonGroup>
-//           </Fragment>
-//         ))}
-//       </section>
-//     ))}
-//   </section>
-// );
+export const Size: ComponentStory<typeof ButtonGroup> = () => (
+  <section className="flex flex-col gap-4">
+    <section className="flex gap-4">
+      {sizes.map((size) => (
+        <section className="flex flex-col gap-4">
+          {borderRadius.map((rounded) => (
+            <ButtonGroup>
+              <Button
+                size={size}
+                color="neutral"
+                rounded={rounded}
+                onClick={action('Clicked !')}
+              >
+                Button
+              </Button>
+              <Button
+                size={size}
+                color="neutral"
+                rounded={rounded}
+                onClick={action('Clicked !')}
+              >
+                Button
+              </Button>
+              <Button
+                size={size}
+                color="neutral"
+                rounded={rounded}
+                onClick={action('Clicked !')}
+              >
+                Button
+              </Button>
+            </ButtonGroup>
+          ))}
+        </section>
+      ))}
+    </section>
+  </section>
+);
